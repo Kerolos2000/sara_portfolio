@@ -1,11 +1,11 @@
-
-
+import { CssBaseline } from "@mui/material";
+import { Layout } from "./components";
 
 export function App() {
-
   return (
     <>
-    <h1>hi!</h1>
+      <CssBaseline />
+      <Layout />
     </>
-  )
+  );
 }
