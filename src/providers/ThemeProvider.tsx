@@ -1,7 +1,7 @@
 import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material";
 import React, { useMemo } from "react";
 import { darkTheme, lightTheme } from "../themes";
-import { Mode } from "../utils";
+import { Mode } from "../types";
 
 import { useChangeMode } from "../hooks/useChangeMode";
 

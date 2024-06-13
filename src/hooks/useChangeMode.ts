@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { useStore } from './useStore';
-import { Mode, StoreKeys } from '../utils';
+import { Mode, StoreKeys } from '../types';
 
 
 export const useChangeMode = (): [Mode, (mode: Mode) => void] => {
