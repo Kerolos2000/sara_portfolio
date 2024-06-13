@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import Vanta from 'vanta/dist/vanta.clouds.min';
@@ -14,8 +14,6 @@ export function HeroSection() {
                 mouseControls: true,
                 touchControls: true,
                 gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
                 skyColor: 0x6dbbd9,
                 cloudColor: 0xb3c7e6,
                 cloudShadowColor: 0x1a3650,
@@ -33,12 +31,10 @@ export function HeroSection() {
     }, []);
 
     return (
-        <Box id="home">
+        <Box id="home" sx={{ minHeight: '70vh', }}>
             <Box className="header-content">
                 <Box className="intro-text">
-                    <h1>Hi, I'm Sara</h1>
-                    <h2>Junior Developer</h2>
-                    <p>Designing the exceptional, at the crossroads of technology and creativity<br /> every pixel of my digital creations tells a story.<br /> Boxe into the universe of my portfolio and discover the symphony of my achievements.</p>
+                    <Typography>Hi, I'm Sara</Typography>
                 </Box>
             </Box>
         </Box>
