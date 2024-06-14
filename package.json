@@ -24,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",
     "three": "^0.165.0",
+    "typed.js": "^2.1.0",
     "vanta": "^0.5.24"
   },
   "devDependencies": {
