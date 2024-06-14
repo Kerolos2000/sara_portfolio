@@ -20,9 +20,10 @@
     "@mui/x-date-pickers": "^7.6.1",
     "atropos": "^2.0.2",
     "axios": "^1.6.8",
+    "change-case": "^5.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0",
+    "react-router-dom": "^6.23.1",
     "three": "^0.165.0",
     "typed.js": "^2.1.0",
     "vanta": "^0.5.24"
