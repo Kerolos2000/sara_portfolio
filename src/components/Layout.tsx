@@ -2,15 +2,19 @@ import { useLocation } from "react-router-dom";
 import { AboutMeSection } from "./AboutMeSection";
 import { AppBar } from "./AppBar";
 import { HeroSection } from "./HeroSection";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ExperienceSection } from "./ExperienceSection";
 import { EducationSection } from "./EducationSection";
 import { SkillsSection } from "./SkillsSection";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
+import { ProjectsSection } from "./ProjectsSection";
+import { Loader } from "./Loader";
+
 export interface LayoutProps { }
 
 export const Layout: React.FC<LayoutProps> = () => {
     const { hash } = useLocation();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (hash) {
@@ -21,16 +25,33 @@ export const Layout: React.FC<LayoutProps> = () => {
         }
     }, [hash]);
 
+    useEffect(() => {
+        const handleLoad = () => {
+            setLoading(false);
+        };
+
+        window.addEventListener("load", handleLoad);
+
+        return () => {
+            window.removeEventListener("load", handleLoad);
+        };
+    }, []);
+
     return (
-        <>
-            <AppBar />
-            <HeroSection />
-            <Container>
-                <AboutMeSection />
-                <EducationSection />
-                <ExperienceSection />
-                <SkillsSection />
-            </Container>
-        </>
+        <Box sx={{ overflowX: 'hidden' }}>
+            {loading ? <Loader /> :
+                <>
+                    <AppBar />
+                    <HeroSection />
+                    <Container>
+                        <AboutMeSection />
+                        <EducationSection />
+                        <ExperienceSection />
+                        <SkillsSection />
+                        <ProjectsSection />
+                    </Container>
+                </>
+            }
+        </Box>
     );
 }
