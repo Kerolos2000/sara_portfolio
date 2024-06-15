@@ -24,7 +24,7 @@ export interface AboutMeSectionProps { }
 
 export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
     return (
-        <AboutSectionContainer component="section" id="About" sx={{ py: 4 }}>
+        <AboutSectionContainer component="section" id="AboutMe" sx={{ py: 4 }}>
             <Container>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={4} alignSelf={"center"}>
