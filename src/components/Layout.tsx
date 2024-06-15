@@ -10,6 +10,7 @@ import { Box, Container } from "@mui/material";
 import { ProjectsSection } from "./ProjectsSection";
 import { Loader } from "./Loader";
 import { ContactSection } from "./ContactSection";
+import { Footer } from "./Footer";
 
 export interface LayoutProps { }
 
@@ -52,6 +53,7 @@ export const Layout: React.FC<LayoutProps> = () => {
                         <ProjectsSection />
                         <ContactSection />
                     </Container>
+                    <Footer />
                 </>
             }
         </Box>
