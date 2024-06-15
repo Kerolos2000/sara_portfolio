@@ -18,13 +18,13 @@ import {
 } from "@mui/icons-material";
 import { alpha, styled } from "@mui/material/styles";
 
-import data_analysis from "../assets/Data analysis-bro.svg";
+import data_analysis from "../assets/data-analysis-bro.svg";
 
 export interface AboutMeSectionProps { }
 
 export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
     return (
-        <AboutSectionContainer component="section" id="AboutMe" sx={{ py: 4 }}>
+        <AboutSectionContainer component="section" id="AboutMe" sx={{ my: 4 }}>
             <Container>
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={4} alignSelf={"center"}>
