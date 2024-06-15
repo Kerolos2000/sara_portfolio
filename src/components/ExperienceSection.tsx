@@ -34,8 +34,8 @@ export const ExperienceSection: React.FC = () => {
                     Experience
                 </Typography>
             </TitleBox>
-            {experiences.map((experience, index) => (
-                <ExperienceItemBox key={index}>
+            {experiences.map((experience) => (
+                <ExperienceItemBox key={JSON.stringify(experience)}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={4}>
                             <SvgContainer>

@@ -4,6 +4,7 @@ import { AppBar } from "./AppBar";
 import { HeroSection } from "./HeroSection";
 import { useEffect } from "react";
 import { ExperienceSection } from "./ExperienceSection";
+import { EducationSection } from "./EducationSection";
 export interface LayoutProps { }
 
 export const Layout: React.FC<LayoutProps> = () => {
@@ -23,6 +24,7 @@ export const Layout: React.FC<LayoutProps> = () => {
             <AppBar />
             <HeroSection />
             <AboutMeSection />
+            <EducationSection />
             <ExperienceSection />
         </>
     );

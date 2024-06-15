@@ -3,3 +3,4 @@ export * from "./Layout";
 export * from "./HeroSection";
 export * from "./AboutMeSection";
 export * from "./ExperienceSection";
+export * from "./EducationSection";
