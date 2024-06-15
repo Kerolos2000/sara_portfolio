@@ -96,10 +96,10 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
                             </Grid>
                         </InformationContainer>
                         <ButtonContainer sx={{ mt: 4, display: "flex", gap: 2 }}>
-                            <Button variant="contained" startIcon={<Download />}>
+                            <Button variant="contained" startIcon={<Download />} href="../assets/SaraIsmailAliCV.pdf" download>
                                 Download CV
                             </Button>
-                            <Button variant="outlined" endIcon={<Send />}>
+                            <Button variant="outlined" endIcon={<Send />} href="tel:+20 106 403 3137">
                                 Hire Me
                             </Button>
                         </ButtonContainer>
