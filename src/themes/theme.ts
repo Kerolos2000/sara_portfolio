@@ -3,8 +3,8 @@ import { ThemeOptions } from '@mui/material';
 export const darkTheme: ThemeOptions = {
 	palette: {
 		background: {
-			default: '#222831',
-			paper: '#31363F',
+			default: '#181818',
+			paper: '#2c2c2c',
 		},
 		common: {
 			black: '#000000',
@@ -13,15 +13,15 @@ export const darkTheme: ThemeOptions = {
 		mode: 'dark',
 		primary: {
 			contrastText: '#ffffff',
-			dark: '#31363F',
-			light: '#76ABAE',
-			main: '#76ABAE',
+			dark: '#49243E',
+			light: '#704264',
+			main: '#e3b9b9',
 		},
 		secondary: {
 			contrastText: '#ffffff',
-			dark: '#62727B',
-			light: '#A0CED9',
-			main: '#A0CED9',
+			dark: '#8a3012',
+			light: '#9F6D88',
+			main: '#8a3012',
 		},
 	},
 	shape: {

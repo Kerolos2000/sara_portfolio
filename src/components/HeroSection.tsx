@@ -7,7 +7,6 @@ export interface HeroSectionProps { }
 
 export const HeroSection: React.FC<HeroSectionProps> = () => {
     const typedRef = useRef(null);
-    <Typography component='h4' variant='h4'></Typography>
 
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
