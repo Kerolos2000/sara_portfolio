@@ -58,7 +58,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
     const theme = useTheme()
     return (
         <Box id="HeroSection" sx={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: theme.spacing(2), maxWidth: '75%' }} gap={theme.spacing(1)}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: theme.spacing(2) }} gap={theme.spacing(1)}>
                 <Typography sx={{ textAlign: 'center', fontWeight: 'bold', fontSize: theme.spacing(4), color: theme.palette.primary.contrastText }}>Hello I'm</Typography>
                 <Typography sx={{ textAlign: 'center', fontWeight: 'bold', fontSize: theme.spacing(8), color: theme.palette.primary.main }}>Sara Ismail Ali</Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center', fontSize: theme.spacing(3), alignItems: 'center', color: theme.palette.primary.contrastText }}>

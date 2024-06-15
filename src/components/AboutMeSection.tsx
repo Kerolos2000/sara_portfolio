@@ -54,8 +54,8 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
                     </Grid>
                     <Grid item xs={12} md={8}>
                         <TitleBox sx={{ mb: 2 }}>
-                            <Typography variant="h2" component="h2" gutterBottom>
-                                HELLO,
+                            <Typography variant="h2" component="h2" gutterBottom textTransform={"uppercase"}>
+                                about me
                             </Typography>
                             <Typography variant="body1">
                                 Junior data analyst with a proven track record of leveraging
@@ -79,8 +79,8 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
                                 <MarginInlineStart variant="body1">{new Date().getFullYear() - new Date('2001-11-11').getFullYear()}</MarginInlineStart>
                             </Grid>
                             <Grid item xs={12} sm={6}>
-                                <Typography variant="h5">Remote Availability:</Typography>
-                                <Chip label="Available" variant="outlined" color="success" size="small" sx={{ MarginInlineStart: 8 }} />
+                                <Typography variant="h5" sx={{ marginInlineEnd: `8px !important` }}>Remote Availability:</Typography>
+                                <Chip label="Available" variant="outlined" color="success" size="small" />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Typography variant="h5">Job Title:</Typography>
