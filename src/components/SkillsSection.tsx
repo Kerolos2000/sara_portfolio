@@ -1,4 +1,4 @@
-import { Box, Grid, styled, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import React from 'react';
 import Atropos from "atropos/react";
 import {
@@ -19,6 +19,7 @@ import {
     PlaylistAddCheckOutlined,
     BuildOutlined
 } from '@mui/icons-material';
+import { Masonry } from '@mui/lab';
 
 export interface Skill {
     name: string;
@@ -107,22 +108,20 @@ export const SkillsSection: React.FC = () => {
                     Skills
                 </Typography>
             </TitleBox>
-            <Grid container spacing={3}>
-                {skills.map((skill, index) => (
-                    <Grid item xs={6} md={3} key={index}>
-                        <Atropos>
-                            <SkillBox>
-                                <Box sx={{ fontWeight: 'bold', mb: 1 }}>
-                                    {skill.icon}
-                                </Box>
-                                <Typography variant="h5" component="h3">
-                                    {skill.name}
-                                </Typography>
-                            </SkillBox>
-                        </Atropos>
-                    </Grid>
+            <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}>
+                {skills.map((skill) => (
+                    <Atropos key={JSON.stringify(skill)}>
+                        <SkillBox>
+                            <Box sx={{ fontWeight: 'bold', mb: 1 }}>
+                                {skill.icon}
+                            </Box>
+                            <Typography variant="h5" component="h3">
+                                {skill.name}
+                            </Typography>
+                        </SkillBox>
+                    </Atropos>
                 ))}
-            </Grid>
+            </Masonry>
         </Box>
     );
 };
