@@ -30,7 +30,7 @@ export const AppBar: React.FC<AppBarProps> = () => {
     // Function to handle scroll events
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
-        setVisible((prevScrollPos > currentScrollPos || currentScrollPos < 10) && currentScrollPos < 200);
+        setVisible(currentScrollPos < prevScrollPos);
         setPrevScrollPos(currentScrollPos);
     };
 
@@ -48,9 +48,7 @@ export const AppBar: React.FC<AppBarProps> = () => {
                 <Toolbar disableGutters>
                     <Typography
                         variant="h6"
-                        noWrap
-                        component="a"
-                        href="#HeroSection"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         sx={{
                             mr: 2,
                             display: 'flex',
@@ -59,6 +57,7 @@ export const AppBar: React.FC<AppBarProps> = () => {
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            cursor: 'pointer',
                         }}
                     >
                         Sara
@@ -115,7 +114,7 @@ export const AppBar: React.FC<AppBarProps> = () => {
                     </Box>
                 </Toolbar>
             </Container>
-        </MuiAppBar>
+        </MuiAppBar >
     );
 }
 

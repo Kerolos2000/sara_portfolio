@@ -43,7 +43,7 @@ export const ContactSection = () => {
   }
 
   return (
-    <Box component="section" id="Education" sx={{ my: 8 }}>
+    <Box component="section" id="Contact" sx={{ my: 8 }}>
       <ToastContainer position="bottom-left" theme={mode} />
       <TitleBox>
         <Typography variant="h2" component="h2">
@@ -117,8 +117,6 @@ export const ContactSection = () => {
     </Box>
   );
 };
-
-
 
 const TitleBox = styled(Box)(({ theme }) => ({
   display: "flex",

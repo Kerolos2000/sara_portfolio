@@ -11,6 +11,7 @@ import { ProjectsSection } from "./ProjectsSection";
 import { Loader } from "./Loader";
 import { ContactSection } from "./ContactSection";
 import { Footer } from "./Footer";
+import { ScrollToTop } from "./ScrollToTop";
 
 export interface LayoutProps { }
 
@@ -54,6 +55,7 @@ export const Layout: React.FC<LayoutProps> = () => {
                         <ContactSection />
                     </Container>
                     <Footer />
+                    <ScrollToTop />
                 </>
             }
         </Box>
