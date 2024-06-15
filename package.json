@@ -13,28 +13,28 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.19",
+    "@mui/icons-material": "^5.15.20",
     "@mui/lab": "latest",
-    "@mui/material": "^5.15.19",
-    "@mui/x-data-grid": "^7.6.1",
-    "@mui/x-date-pickers": "^7.6.1",
+    "@mui/material": "^5.15.20",
+    "@mui/x-data-grid": "^7.7.0",
+    "@mui/x-date-pickers": "^7.7.0",
     "atropos": "^2.0.2",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "change-case": "^5.4.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "three": "^0.165.0",
     "typed.js": "^2.1.0",
     "vanta": "^0.5.24"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "git-cz": "^4.9.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1"
   }
 }
