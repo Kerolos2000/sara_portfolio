@@ -5,6 +5,8 @@ import { HeroSection } from "./HeroSection";
 import { useEffect } from "react";
 import { ExperienceSection } from "./ExperienceSection";
 import { EducationSection } from "./EducationSection";
+import { SkillsSection } from "./SkillsSection";
+import { Container } from "@mui/material";
 export interface LayoutProps { }
 
 export const Layout: React.FC<LayoutProps> = () => {
@@ -23,9 +25,12 @@ export const Layout: React.FC<LayoutProps> = () => {
         <>
             <AppBar />
             <HeroSection />
-            <AboutMeSection />
-            <EducationSection />
-            <ExperienceSection />
+            <Container>
+                <AboutMeSection />
+                <EducationSection />
+                <ExperienceSection />
+                <SkillsSection />
+            </Container>
         </>
     );
 }

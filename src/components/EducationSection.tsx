@@ -24,7 +24,7 @@ const educations: EducationItem[] = [
 
 export const EducationSection: React.FC = () => {
     return (
-        <Box component="section" id="Education" sx={{ my: 8, px: 3 }}>
+        <Box component="section" id="Education" sx={{ my: 8 }}>
             <TitleBox>
                 <Typography variant="h2" component="h2">
                     Education

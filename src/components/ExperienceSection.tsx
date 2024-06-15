@@ -28,7 +28,7 @@ const experiences: ExperienceItem[] = [
 
 export const ExperienceSection: React.FC = () => {
     return (
-        <Box component="section" id="Experience" sx={{ my: 8, px: 3 }}>
+        <Box component="section" id="Experience" sx={{ my: 8 }}>
             <TitleBox>
                 <Typography variant="h2" component="h2">
                     Experience
@@ -46,7 +46,7 @@ export const ExperienceSection: React.FC = () => {
                             <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold', mb: 1 }}>
                                 {experience.title}
                             </Typography>
-                            <Box sx={{ display: 'flex' }} gap={1} mb={2}>
+                            <Box sx={{ display: 'flex', flexWrap: 'wrap' }} gap={1} mb={2}>
                                 <Chip label={experience.company} color='info' icon={<WorkOutline />} />
                                 <Chip label={experience.period} color='success' icon={<Event />} />
                                 <Chip label={experience.location} color='secondary' icon={<WorkOutline />} />
