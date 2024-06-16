@@ -13,7 +13,7 @@ export const darkTheme: ThemeOptions = {
     mode: "dark",
     primary: {
       contrastText: "#ffffff",
-      dark: "#ad2d87",
+      dark: "#aa245a",
       light: "#784368",
       main: "#aa7b7b",
     },

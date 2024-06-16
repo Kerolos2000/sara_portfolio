@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { WorkOutline, Event } from "@mui/icons-material";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import React from "react";
 import work1 from "../assets/freelancer-bro.svg";
 import Atropos from "atropos/react";
@@ -46,11 +47,15 @@ export const ExperienceSection: React.FC = () => {
         </Typography>
       </TitleBox>
       {experiences.map((experience) => (
-        <Atropos key={JSON.stringify(experience)}>
+        <Atropos rotateTouch="scroll-y" key={JSON.stringify(experience)}>
           <ItemBox>
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
-                <Atropos highlight={false} shadow={false}>
+                <Atropos
+                  rotateTouch="scroll-y"
+                  highlight={false}
+                  shadow={false}
+                >
                   <SvgContainer>
                     <img
                       style={{ maxWidth: "75%" }}
@@ -78,25 +83,25 @@ export const ExperienceSection: React.FC = () => {
                   {experience.title}
                 </Typography>
                 <Box sx={{ display: "flex", flexWrap: "wrap" }} gap={1} mb={2}>
-                  <Atropos shadow={false}>
+                  <Atropos rotateTouch="scroll-y" shadow={false}>
                     <StyledChip
                       label={experience.company}
                       color="info"
                       icon={<WorkOutline />}
                     />
                   </Atropos>
-                  <Atropos shadow={false}>
+                  <Atropos rotateTouch="scroll-y" shadow={false}>
                     <StyledChip
                       label={experience.period}
                       color="success"
                       icon={<Event />}
                     />
                   </Atropos>
-                  <Atropos shadow={false}>
+                  <Atropos rotateTouch="scroll-y" shadow={false}>
                     <StyledChip
                       label={experience.location}
                       color="secondary"
-                      icon={<WorkOutline />}
+                      icon={<LocationOnOutlinedIcon />}
                     />
                   </Atropos>
                 </Box>

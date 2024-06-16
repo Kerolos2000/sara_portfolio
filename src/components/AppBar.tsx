@@ -98,14 +98,6 @@ export const AppBar: React.FC<AppBarProps> = () => {
           <Menu
             id="menu-appbar"
             anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
             open={Boolean(anchorElNav)}
             onClose={() => setAnchorElNav(null)}
             sx={{
@@ -120,7 +112,6 @@ export const AppBar: React.FC<AppBarProps> = () => {
 
             <MenuItem>
               <MaterialUISwitch
-                sx={{ m: 1 }}
                 checked={mode === Mode.dark}
                 onChange={() =>
                   setMode(mode === Mode.dark ? Mode.light : Mode.dark)

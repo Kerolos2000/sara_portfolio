@@ -23,36 +23,36 @@ export const Footer = () => {
             <LinkedIn />
           </IconButton>
         </Box>
-        <StyledFooterText>
-          <Typography variant="body1">
-            2024 © By{" "}
-            <StyledLink href="https://www.linkedin.com/in/kerolos-magdy-314644212/">
-              Kerolos Magdy
-            </StyledLink>
-          </Typography>
-        </StyledFooterText>
+        <Typography variant="body1">
+          2024 © Powered By{" "}
+          <StyledLink href="https://www.linkedin.com/in/kerolos-magdy-314644212/">
+            Kerolos Magdy
+          </StyledLink>
+        </Typography>
       </StyledContainer>
     </StyledFooter>
   );
 };
 
 const StyledFooter = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.dark,
-  color: "#fff",
+  backgroundColor: theme.palette.background.paper,
+  color: theme.palette.common.white,
   textAlign: "center",
   padding: theme.spacing(3),
 }));
 
-const StyledContainer = styled(Container)({
+const StyledContainer = styled(Container)(({ theme }) => ({
   textAlign: "center",
-});
-
-const StyledFooterText = styled(Box)({
-  fontSize: "20px",
-});
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: theme.spacing(1),
+}));
 
 const StyledLink = styled(Link)(({ theme }) => ({
   color: theme.palette.primary.main,
   cursor: "pointer",
   textDecoration: "none",
+  fontWeight: "bold",
 }));

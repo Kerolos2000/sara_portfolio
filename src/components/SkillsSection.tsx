@@ -2,17 +2,15 @@ import { Box, styled, Typography } from "@mui/material";
 import React from "react";
 import Atropos from "atropos/react";
 import {
-  Storage,
-  BarChart,
-  InsertChartOutlined,
-  Code,
-  Functions,
-  LocalDining,
-  Analytics,
-  EmojiObjects,
   StorageOutlined,
   BarChartOutlined,
-  Grain,
+  InsertChartOutlined,
+  CodeOutlined,
+  FunctionsOutlined,
+  LocalDiningOutlined,
+  AnalyticsOutlined,
+  EmojiObjectsOutlined,
+  GrainOutlined,
   FilterListOutlined,
   AccountTreeOutlined,
   LayersOutlined,
@@ -29,11 +27,11 @@ export interface Skill {
 const skills: Skill[] = [
   {
     name: "MySQL",
-    icon: <Storage fontSize="large" />,
+    icon: <StorageOutlined fontSize="large" />,
   },
   {
     name: "Power BI",
-    icon: <BarChart fontSize="large" />,
+    icon: <BarChartOutlined fontSize="large" />,
   },
   {
     name: "Excel",
@@ -41,23 +39,23 @@ const skills: Skill[] = [
   },
   {
     name: "Python",
-    icon: <Code fontSize="large" />,
+    icon: <CodeOutlined fontSize="large" />,
   },
   {
     name: "R",
-    icon: <Functions fontSize="large" />,
+    icon: <FunctionsOutlined fontSize="large" />,
   },
   {
     name: "HTML/CSS",
-    icon: <LocalDining fontSize="large" />,
+    icon: <LocalDiningOutlined fontSize="large" />,
   },
   {
     name: "PHP",
-    icon: <Analytics fontSize="large" />,
+    icon: <AnalyticsOutlined fontSize="large" />,
   },
   {
     name: "JavaScript",
-    icon: <EmojiObjects fontSize="large" />,
+    icon: <EmojiObjectsOutlined fontSize="large" />,
   },
   {
     name: "SAS Viya",
@@ -69,7 +67,7 @@ const skills: Skill[] = [
   },
   {
     name: "Data Modeling",
-    icon: <Grain fontSize="large" />,
+    icon: <GrainOutlined fontSize="large" />,
   },
   {
     name: "Data Visualization",
@@ -111,7 +109,7 @@ export const SkillsSection: React.FC = () => {
       </TitleBox>
       <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}>
         {skills.map((skill) => (
-          <Atropos key={JSON.stringify(skill)}>
+          <Atropos rotateTouch="scroll-y" key={JSON.stringify(skill)}>
             <SkillBox>
               <Box sx={{ fontWeight: "bold", mb: 1 }}>{skill.icon}</Box>
               <Typography variant="h5" component="h3">

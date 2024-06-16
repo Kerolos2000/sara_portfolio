@@ -1,8 +1,8 @@
 import { Box, Grid, styled, Typography, Icon, alpha } from "@mui/material";
 import React from "react";
 import education_svg from "../assets/graduation hats-pana.svg";
-import EventIcon from "@mui/icons-material/Event"; // Import the Event icon from Material-UI
-import LocationOnIcon from "@mui/icons-material/LocationOn"; // Import the LocationOn icon from Material-UI
+import EventIcon from "@mui/icons-material/Event";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import { ItemBox, SvgContainer, TitleBox } from "../themes";
 import Atropos from "atropos/react";
 
@@ -33,11 +33,15 @@ export const EducationSection: React.FC = () => {
         </Typography>
       </TitleBox>
       {educations.map((education) => (
-        <Atropos key={JSON.stringify(education)}>
+        <Atropos rotateTouch="scroll-y" key={JSON.stringify(education)}>
           <ItemBox>
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
-                <Atropos highlight={false} shadow={false}>
+                <Atropos
+                  rotateTouch="scroll-y"
+                  highlight={false}
+                  shadow={false}
+                >
                   <SvgContainer>
                     <img
                       style={{ maxWidth: "50%" }}
@@ -70,7 +74,7 @@ export const EducationSection: React.FC = () => {
                 </TypographyWithBorder>
                 <TypographyWithBorder variant="body1" sx={{ mb: 2 }}>
                   <Icon
-                    component={LocationOnIcon}
+                    component={LocationOnOutlinedIcon}
                     sx={{ fontSize: 20, mr: 1 }}
                   />
                   {education.location}

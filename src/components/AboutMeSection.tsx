@@ -169,7 +169,7 @@ const ImageBorder = styled(Box)(({ theme }) => ({
   transform: "translate(0, -23px)",
   zIndex: -1,
   [theme.breakpoints.down("lg")]: {
-    transform: `translate(-${theme.spacing(3.125)}, -${theme.spacing(3.125)})`,
+    transform: "translate(0, -23px)",
   },
   [theme.breakpoints.down("md")]: {
     display: "none",

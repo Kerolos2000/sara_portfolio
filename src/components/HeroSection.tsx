@@ -36,8 +36,8 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
         scale: 1.0,
         scaleMobile: 1.0,
         backgroundColor: 0x160625,
-        color1: 0xf5f5f5,
-        color2: 0xff000e,
+        color1: 0xf77575,
+        color2: 0xfffffe,
         colorMode: "lerp",
         birdSize: 0.8,
         wingSpan: 25.0,
@@ -83,7 +83,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           sx={{
             textAlign: "center",
             fontWeight: "bold",
-            fontSize: theme.spacing(8),
+            fontSize: "calc(2rem + 2vw);",
             color: theme.palette.primary.main,
           }}
         >
@@ -93,13 +93,12 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            fontSize: theme.spacing(3),
             alignItems: "center",
             color: theme.palette.primary.contrastText,
           }}
         >
           <Typography
-            sx={{ fontSize: theme.spacing(3) }}
+            sx={{ fontSize: theme.spacing(3), textAlign: "center" }}
             id="typed"
             ref={typedRef}
           />

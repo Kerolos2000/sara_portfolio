@@ -56,7 +56,7 @@ export const ProjectsSection: React.FC = () => {
           <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}>
             {data.map((el) => (
               <MasonryItem key={el.id}>
-                <Atropos rotateTouch={false} shadowScale={0.9}>
+                <Atropos rotateTouch="scroll-y" shadowScale={0.9}>
                   <SkillBox>
                     <Typography variant="h5" gutterBottom>
                       {noCase(el?.name)}
@@ -94,6 +94,6 @@ const SkillBox = styled(Box)(({ theme }) => ({
 }));
 
 const MasonryItem = styled(Box)({
-  marginBottom: "16px", // Adjust as per your design
-  width: "100%", // Ensure items take full width within columns
+  marginBottom: "16px",
+  width: "100%",
 });
