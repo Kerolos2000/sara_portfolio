@@ -47,12 +47,6 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
         cohesion: 5.0,
       });
     }
-
-    return () => {
-      if (vantaRef.current) {
-        vantaRef.current.destroy();
-      }
-    };
   }, []);
 
   const theme = useTheme();
