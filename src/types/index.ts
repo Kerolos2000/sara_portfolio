@@ -1,2 +1,2 @@
-export * from './Mode';
-export * from './StoreKeys';
+export * from "./Mode";
+export * from "./StoreKeys";

@@ -7,7 +7,7 @@ import { noCase } from "change-case";
 import { Masonry } from "@mui/lab";
 import { Loader } from "./Loader";
 
-export interface ProjectsProps { }
+export interface ProjectsProps {}
 
 interface Project {
   id: string;
@@ -32,7 +32,7 @@ export const ProjectsSection: React.FC = () => {
         setLoader(false);
       })
       .catch((err) => {
-        console.log("🚀 ~ callApi ~ err:", err)
+        console.log("🚀 ~ callApi ~ err:", err);
         setLoader(false);
       });
   }
@@ -78,7 +78,7 @@ export const ProjectsSection: React.FC = () => {
       )}
     </>
   );
-}
+};
 
 const TitleBox = styled(Box)(({ theme }) => ({
   display: "flex",

@@ -13,51 +13,53 @@ import { ContactSection } from "./ContactSection";
 import { Footer } from "./Footer";
 import { ScrollToTop } from "./ScrollToTop";
 
-export interface LayoutProps { }
+export interface LayoutProps {}
 
 export const Layout: React.FC<LayoutProps> = () => {
-    const { hash } = useLocation();
-    const [loading, setLoading] = useState(true);
+  const { hash } = useLocation();
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        if (hash) {
-            const element = document.querySelector(hash);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    }, [hash]);
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
 
-    useEffect(() => {
-        const handleLoad = () => {
-            setLoading(false);
-        };
+  useEffect(() => {
+    const handleLoad = () => {
+      setLoading(false);
+    };
 
-        window.addEventListener("load", handleLoad);
+    window.addEventListener("load", handleLoad);
 
-        return () => {
-            window.removeEventListener("load", handleLoad);
-        };
-    }, []);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
 
-    return (
-        <Box sx={{ overflowX: 'hidden' }}>
-            {loading ? <Loader /> :
-                <>
-                    <AppBar />
-                    <HeroSection />
-                    <Container>
-                        <AboutMeSection />
-                        <EducationSection />
-                        <ExperienceSection />
-                        <SkillsSection />
-                        <ProjectsSection />
-                        <ContactSection />
-                    </Container>
-                    <Footer />
-                    <ScrollToTop />
-                </>
-            }
-        </Box>
-    );
-}
+  return (
+    <Box sx={{ overflowX: "hidden" }}>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <AppBar />
+          <HeroSection />
+          <Container>
+            <AboutMeSection />
+            <EducationSection />
+            <ExperienceSection />
+            <SkillsSection />
+            <ProjectsSection />
+            <ContactSection />
+          </Container>
+          <Footer />
+          <ScrollToTop />
+        </>
+      )}
+    </Box>
+  );
+};

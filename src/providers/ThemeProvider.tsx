@@ -5,19 +5,19 @@ import { Mode } from "../types";
 
 import { useChangeMode } from "../hooks/useChangeMode";
 
-interface ThemeProviderProps { }
+interface ThemeProviderProps {}
 
 export const ThemeProvider = (
-	props: React.PropsWithChildren<ThemeProviderProps>
+  props: React.PropsWithChildren<ThemeProviderProps>
 ) => {
-	const { children } = props;
+  const { children } = props;
 
-	const [mode] = useChangeMode();
+  const [mode] = useChangeMode();
 
-	const theme = useMemo(
-		() => createTheme(mode === Mode.dark ? darkTheme : lightTheme, {}),
-		[mode]
-	);
+  const theme = useMemo(
+    () => createTheme(mode === Mode.dark ? darkTheme : lightTheme, {}),
+    [mode]
+  );
 
-	return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
+  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
 };

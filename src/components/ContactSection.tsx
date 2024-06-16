@@ -1,5 +1,12 @@
 import { useForm } from "react-hook-form";
-import { Typography, Grid, TextField, Button, Box, styled } from "@mui/material";
+import {
+  Typography,
+  Grid,
+  TextField,
+  Button,
+  Box,
+  styled,
+} from "@mui/material";
 import useNotify from "../hooks/useNotify";
 import { toast } from "react-toastify";
 import emailjs from "emailjs-com";
@@ -19,7 +26,7 @@ export const ContactSection = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<DataValues>();
 
   const onSubmit = (data: DataValues) => {
@@ -40,7 +47,7 @@ export const ContactSection = () => {
       .then(() => {
         reset();
       });
-  }
+  };
 
   return (
     <Box component="section" id="Contact" sx={{ my: 8 }}>

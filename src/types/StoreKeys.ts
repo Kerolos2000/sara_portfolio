@@ -1,3 +1,3 @@
 export enum StoreKeys {
-	Mode = 'mode',
+  Mode = "mode",
 }
