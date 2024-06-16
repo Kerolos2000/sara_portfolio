@@ -11,6 +11,7 @@ import useNotify from "../hooks/useNotify";
 import { toast } from "react-toastify";
 import emailjs from "emailjs-com";
 import { useChangeMode } from "../hooks";
+import { TitleBox } from "../themes";
 
 interface DataValues {
   name: string;
@@ -124,23 +125,3 @@ export const ContactSection = () => {
     </Box>
   );
 };
-
-const TitleBox = styled(Box)(({ theme }) => ({
-  display: "flex",
-  justifyContent: "center",
-  marginBottom: theme.spacing(4),
-  "& h2": {
-    paddingBottom: theme.spacing(1),
-    position: "relative",
-    "&::before": {
-      content: '""',
-      position: "absolute",
-      bottom: 0,
-      left: "50%",
-      transform: "translateX(-50%)",
-      backgroundColor: theme.palette.primary.main,
-      width: "50%",
-      height: theme.spacing(0.5),
-    },
-  },
-}));
