@@ -12,20 +12,12 @@ export const GlobalStyles: React.FC<GlobalStylesProps> = () => {
         "*": {
           direction: "ltr",
         },
-        a: {
-          "&:hover": {
-            color: theme.palette.secondary.main,
-          },
-          color: theme.palette.primary.main,
-          textDecoration: "none",
-          transition: "0.5s",
-        },
         /* Scrollbar styles */
         "::-webkit-scrollbar": {
           width: "12px",
         },
         "::-webkit-scrollbar-track": {
-          background: "#f1f1f1",
+          background: theme.palette.grey[300],
         },
         "::-webkit-scrollbar-thumb": {
           background: theme.palette.primary.main,
@@ -40,7 +32,7 @@ export const GlobalStyles: React.FC<GlobalStylesProps> = () => {
         },
         "::-moz-selection": {
           background: theme.palette.primary.main,
-          color: "#fff",
+          color: theme.palette.primary.contrastText,
         },
       }}
     />

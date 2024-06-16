@@ -7,7 +7,7 @@ export const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
 
   const handleScroll = () => {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -44,4 +44,5 @@ const ScrollTopButton = styled(Fab)(({ theme }) => ({
   bottom: theme.spacing(2),
   right: theme.spacing(2),
   zIndex: 1000,
+  transition: "0.5s",
 }));

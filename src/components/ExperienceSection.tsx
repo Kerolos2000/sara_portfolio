@@ -1,5 +1,5 @@
 import { alpha, Box, Chip, Grid, styled, Typography } from "@mui/material";
-import { WorkOutline, Event } from "@mui/icons-material"; // Importing additional icons
+import { WorkOutline, Event } from "@mui/icons-material";
 import React from "react";
 import work1 from "../assets/freelancer-bro.svg";
 
@@ -60,17 +60,17 @@ export const ExperienceSection: React.FC = () => {
                 {experience.title}
               </Typography>
               <Box sx={{ display: "flex", flexWrap: "wrap" }} gap={1} mb={2}>
-                <Chip
+                <StyledChip
                   label={experience.company}
                   color="info"
                   icon={<WorkOutline />}
                 />
-                <Chip
+                <StyledChip
                   label={experience.period}
                   color="success"
                   icon={<Event />}
                 />
-                <Chip
+                <StyledChip
                   label={experience.location}
                   color="secondary"
                   icon={<WorkOutline />}
@@ -95,6 +95,10 @@ export const ExperienceSection: React.FC = () => {
     </Box>
   );
 };
+
+const StyledChip = styled(Chip)(({ theme }) => ({
+  padding: theme.spacing(0.5, 1),
+}));
 
 const TitleBox = styled(Box)(({ theme }) => ({
   display: "flex",

@@ -44,7 +44,7 @@ export const AppBar: React.FC<AppBarProps> = () => {
 
   // Function to handle scroll events
   const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
+    const currentScrollPos = window.scrollY;
     setVisible(currentScrollPos < prevScrollPos);
     setPrevScrollPos(currentScrollPos);
   };

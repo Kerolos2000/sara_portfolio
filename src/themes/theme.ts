@@ -13,15 +13,9 @@ export const darkTheme: ThemeOptions = {
     mode: "dark",
     primary: {
       contrastText: "#ffffff",
-      dark: "#49243E",
-      light: "#704264",
-      main: "#e3b9b9",
-    },
-    secondary: {
-      contrastText: "#ffffff",
-      dark: "#8a3012",
-      light: "#9F6D88",
-      main: "#8a3012",
+      dark: "#ad2d87",
+      light: "#784368",
+      main: "#aa7b7b",
     },
   },
   shape: {
@@ -45,12 +39,6 @@ export const lightTheme: ThemeOptions = {
       dark: "#704264",
       light: "#49243E",
       main: "#e3b9b9",
-    },
-    secondary: {
-      contrastText: "#ffffff",
-      dark: "#9F6D88",
-      light: "#8a3012",
-      main: "#8a3012",
     },
   },
   shape: {
