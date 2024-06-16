@@ -10,3 +10,4 @@ export * from "./ContactSection";
 export * from "./Footer";
 export * from "./ScrollToTop";
 export * from "./GlobalStyles";
+export * from "./CertificateSection";
