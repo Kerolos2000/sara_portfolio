@@ -33,11 +33,11 @@ export const EducationSection: React.FC = () => {
         </Typography>
       </TitleBox>
       {educations.map((education) => (
-        <Atropos shadow={false} key={JSON.stringify(education)}>
+        <Atropos key={JSON.stringify(education)}>
           <ItemBox>
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
-                <Atropos shadow={false} highlight={false}>
+                <Atropos highlight={false} shadow={false}>
                   <SvgContainer>
                     <img
                       style={{ maxWidth: "50%" }}

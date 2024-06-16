@@ -17,6 +17,12 @@ export const darkTheme: ThemeOptions = {
       light: "#784368",
       main: "#aa7b7b",
     },
+    secondary: {
+      contrastText: "#ffffff",
+      dark: "#6a1b9a",
+      light: "#9c4dcc",
+      main: "#8e24aa",
+    },
   },
   shape: {
     borderRadius: 25,
@@ -39,6 +45,12 @@ export const lightTheme: ThemeOptions = {
       dark: "#704264",
       light: "#49243E",
       main: "#e3b9b9",
+    },
+    secondary: {
+      contrastText: "#ffffff",
+      dark: "#e65100",
+      light: "#ff9800",
+      main: "#ff5722",
     },
   },
   shape: {

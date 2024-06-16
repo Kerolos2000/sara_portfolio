@@ -46,11 +46,11 @@ export const ExperienceSection: React.FC = () => {
         </Typography>
       </TitleBox>
       {experiences.map((experience) => (
-        <Atropos shadow={false} key={JSON.stringify(experience)}>
+        <Atropos key={JSON.stringify(experience)}>
           <ItemBox>
             <Grid container spacing={2}>
               <Grid item xs={12} md={4}>
-                <Atropos shadow={false} highlight={false}>
+                <Atropos highlight={false} shadow={false}>
                   <SvgContainer>
                     <img
                       style={{ maxWidth: "75%" }}

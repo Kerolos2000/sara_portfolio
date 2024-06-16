@@ -1,4 +1,10 @@
-import { alpha, Box, CircularProgress, useTheme } from "@mui/material";
+import {
+  alpha,
+  Box,
+  CircularProgress,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import React from "react";
 
 export interface LoaderProps {}
@@ -9,6 +15,8 @@ export const Loader: React.FC<LoaderProps> = () => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: "column",
+        gap: 2,
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
@@ -25,7 +33,7 @@ export const Loader: React.FC<LoaderProps> = () => {
       <svg width={0} height={0}>
         <defs>
           <linearGradient id="my_gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor={theme.palette.secondary.main} />
+            <stop offset="0%" stopColor={theme.palette.primary.dark} />
             <stop offset="100%" stopColor={theme.palette.primary.main} />
           </linearGradient>
         </defs>
@@ -34,6 +42,18 @@ export const Loader: React.FC<LoaderProps> = () => {
         size={100}
         sx={{ "svg circle": { stroke: "url(#my_gradient)" } }}
       />
+      <Typography
+        variant="h4"
+        sx={{
+          textAlign: "center",
+          fontWeight: "bold",
+          fontFamily: "cursive",
+          color: theme.palette.primary.dark,
+          textShadow: `${theme.spacing(0.5)} ${theme.spacing(0.5)} ${theme.spacing(1)} ${alpha(theme.palette.primary.dark, 0.8)}`,
+        }}
+      >
+        Loading...
+      </Typography>
     </Box>
   );
 };
