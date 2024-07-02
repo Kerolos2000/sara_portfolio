@@ -29,16 +29,12 @@ export const Layout: React.FC<LayoutProps> = () => {
     }
   }, [hash]);
 
+  const handleLoad = () => {
+    setLoading(false);
+  };
+
   useEffect(() => {
-    const handleLoad = () => {
-      setLoading(false);
-    };
-
     window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
   }, []);
 
   return (

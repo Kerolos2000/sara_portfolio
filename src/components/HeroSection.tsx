@@ -95,6 +95,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             justifyContent: "center",
             alignItems: "center",
             color: theme.palette.primary.contrastText,
+            minHeight: theme.spacing(5),
           }}
         >
           <Typography
