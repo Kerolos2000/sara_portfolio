@@ -39,25 +39,21 @@ export const Layout: React.FC<LayoutProps> = () => {
 
   return (
     <Box sx={{ overflowX: "hidden" }}>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <AppBar />
-          <HeroSection />
-          <Container>
-            <AboutMeSection />
-            <EducationSection />
-            <ExperienceSection />
-            <SkillsSection />
-            <ProjectsSection />
-            <CertificateSection />
-            <ContactSection />
-          </Container>
-          <Footer />
-          <ScrollToTop />
-        </>
-      )}
+      <>
+        <AppBar />
+        <HeroSection />
+        <Container>
+          <AboutMeSection />
+          <EducationSection />
+          <ExperienceSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <CertificateSection />
+          <ContactSection />
+        </Container>
+        <Footer />
+        <ScrollToTop />
+      </>
     </Box>
   );
 };

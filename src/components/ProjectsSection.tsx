@@ -44,39 +44,35 @@ export const ProjectsSection: React.FC = () => {
 
   return (
     <>
-      {loader ? (
-        <Loader />
-      ) : (
-        <Box id="Projects" component={"section"} sx={{ my: 8 }}>
-          <TitleBox>
-            <Typography variant="h2" component="h2">
-              Projects
-            </Typography>
-          </TitleBox>
-          <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}>
-            {data.map((el) => (
-              <MasonryItem key={el.id}>
-                <Atropos rotateTouch="scroll-y" shadowScale={0.9}>
-                  <SkillBox>
-                    <Typography variant="h5" gutterBottom>
-                      {noCase(el?.name)}
-                    </Typography>
-                    <Box>
-                      <Button
-                        variant="contained"
-                        href={el.html_url}
-                        target="_blank"
-                      >
-                        Show Now
-                      </Button>
-                    </Box>
-                  </SkillBox>
-                </Atropos>
-              </MasonryItem>
-            ))}
-          </Masonry>
-        </Box>
-      )}
+      <Box id="Projects" component={"section"} sx={{ my: 8 }}>
+        <TitleBox>
+          <Typography variant="h2" component="h2">
+            Projects
+          </Typography>
+        </TitleBox>
+        <Masonry columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}>
+          {data.map((el) => (
+            <MasonryItem key={el.id}>
+              <Atropos rotateTouch="scroll-y" shadowScale={0.9}>
+                <SkillBox>
+                  <Typography variant="h5" gutterBottom>
+                    {noCase(el?.name)}
+                  </Typography>
+                  <Box>
+                    <Button
+                      variant="contained"
+                      href={el.html_url}
+                      target="_blank"
+                    >
+                      Show Now
+                    </Button>
+                  </Box>
+                </SkillBox>
+              </Atropos>
+            </MasonryItem>
+          ))}
+        </Masonry>
+      </Box>
     </>
   );
 };
