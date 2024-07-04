@@ -82,7 +82,8 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
               <Typography variant="h5">Age:</Typography>
               <MarginInlineStart variant="body1">
                 {new Date().getFullYear() -
-                  new Date("2001-11-11").getFullYear()}
+                  new Date("2001-11-11").getFullYear() -
+                  1}
               </MarginInlineStart>
             </Grid>
             <Grid item xs={12} sm={6}>

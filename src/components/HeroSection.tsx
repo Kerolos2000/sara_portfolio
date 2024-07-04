@@ -10,7 +10,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Data Analyst"],
+      strings: ["Data Analyst", "Data Scientist"],
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 2000,

@@ -5,7 +5,6 @@ import axios from "axios";
 import Atropos from "atropos/react";
 import { noCase } from "change-case";
 import { Masonry } from "@mui/lab";
-import { Loader } from "./Loader";
 import { TitleBox } from "../themes";
 
 export interface ProjectsProps {}
@@ -18,29 +17,21 @@ interface Project {
 
 export const ProjectsSection: React.FC = () => {
   const [data, setData] = useState<Project[]>([]);
-  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     callApi();
   }, []);
 
   function callApi() {
-    setLoader(true);
     axios
       .get("https://api.github.com/users/saraismailali/repos")
       .then((res) => {
         setData(res.data);
-        setLoader(false);
       })
       .catch((err) => {
         console.log("🚀 ~ callApi ~ err:", err);
-        setLoader(false);
       });
   }
-
-  useEffect(() => {
-    document.body.style.overflowY = loader ? "hidden" : "auto";
-  }, [loader]);
 
   return (
     <>

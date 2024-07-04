@@ -7,6 +7,8 @@ import img5 from "../assets/certificate5.png";
 import img6 from "../assets/certificate6.png";
 import img7 from "../assets/certificate7.png";
 import img8 from "../assets/certificate8.png";
+import img9 from "../assets/certificate9.jpg";
+import img10 from "../assets/certificate10.jpg";
 import { Box, Typography } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { TitleBox } from "../themes";
@@ -15,9 +17,18 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { styled } from "@mui/system";
 
-const certificateImages = [img1, img2, img3, img4, img5, img6, img7, img8].map(
-  (img) => ({ original: img })
-);
+const certificateImages = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+].map((img) => ({ original: img }));
 
 const GalleryContainer = styled(Box)(({ theme }) => ({
   position: "fixed",
